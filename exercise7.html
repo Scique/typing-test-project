@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Exercise 7</h1>
+    <h2>Example</h2>
+    <input id="input1" type="text">
+    <span>+</span>
+    <input id="input2" type="text">
+    <span>=</span>
+    <span id="output1">?</span>
+
+    <h1 id="exercise1">exercise wan</h1>
+    <br>    <br>
+    <input type="text" id="ex2box">
+</body>
+
+<script>
+    /* -------------------------------------------------------------------------- */
+    /*                   All answers should be displayed as HTML                  */
+    /* -------------------------------------------------------------------------- */
+
+    /* --------------------------------- Example -------------------------------- */
+
+    const input1 = document.getElementById("input1")
+    const input2 = document.getElementById("input2")
+
+    const output1 = document.getElementById("output1")
+
+    function add() {
+        setTimeout(() => {
+            if (!input1.value || !input2.value) {
+                output1.textContent = "?"
+            }
+
+            output1.textContent = parseInt(input1.value) + parseInt(input2.value)
+        }, 10)
+    }
+
+    input1.onkeydown = add
+    input2.onkeydown = add
+
+
+    /* ------------------------------- Exercise 1 ------------------------------- */
+
+    // Using setInterval, make a text that flashes on and off.
+    
+    // let wan1 = document.getElementById("exercise1")
+    // let wanvar = 0
+    // function wan() {
+    //     if(wanvar == 0){
+    //         wan1.style.display = "block"
+    //         wanvar = 1;
+    //     }
+    //     else{
+    //         wan1.style.display = "none"
+    //         wanvar = 0
+    //     }
+    // }
+    
+    // setInterval(wan, 1);
+
+
+    /* ------------------------------- Exercise 2 ------------------------------- */
+
+    // Using setTimeout, make a text input that deletes its contents one second after something is inputed
+    let bock1 = document.getElementById("ex2box")
+    bock1.onchange = function() {
+        setTimeout(function(){
+            bock1.style.display = "none"
+            bock1.style.display = "block"
+        }, 1000)
+    }
+    
+
+
+
+    
+
+    /* ------------------------------- Exercise 3 ------------------------------- */
+
+    // Make a form that guesses your height based on your weight and gender, and vice versa
+    //  Use two input fields, and change the other input field when one is changed
+    // Hint: Use onchange or onkeydown
+
+
+
+    /* ------------------------------- Exercise 4 ------------------------------- */
+
+    // Make a clicker game that counts how many times you clicked a button in a given amount of time
+
+
+
+
+    /* ------------------------------- Exercise 5 ------------------------------- */
+
+    // Using CSS color, background-color, and border-radius, make pretty headings for each exercise section.
+    //  Put each section under a <h2> tag if you haven't already.
+
+
+
+
+
+</script>
+
+<style>
+    h1 {
+        color: black;
+        padding: 16px;
+        width: fit-content;
+
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        background-color: lightblue;
+        border-radius: 15px;
+    }
+    *{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+</style>
+
+</html>
